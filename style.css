@@ -6,15 +6,14 @@ div{
 }
 */
 
-body {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 18px;
-  box-sizing: border-box;
-}
+ /* =================== \
+|         Variabls       |
+ \ =================== */
 
-:root {
+
+ :root {
   --color-bg-primary: ivory;
-  --color-bg-secondary: rgb(35, 35, 95);
+  --color-bg-secondary: rgb(35, 35, 73);
   --color-text-primary: rgb(56, 56, 56);
   --color-text-secondary: ivory;
   --color-checkbox-green: green;
@@ -23,6 +22,44 @@ body {
   --font-size-h1: 30px;
   --font-size-h2: 24px;
   --font-size-h3: 20px;
+
+  --section-height-header: 10vh;
+  --section-height-footer: 10vh;
+  --section-height-main: calc(100vh - (var(--section-height-header) + var(--section-height-footer)));
+}
+
+ /* =================== \
+|         Elements       |
+ \ =================== */
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  box-sizing: border-box;
+}
+
+header, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-secondary);
+  padding: 10px;
+}
+
+header {
+  min-height: var(--section-height-header);
+}
+
+footer {
+  min-height: var(--section-height-footer);  
+  padding: auto 0; 
+}
+
+main {
+  min-height: var(--section-height-main);
 }
 
 /* Will need to replace the OS styles */
@@ -106,27 +143,18 @@ button:active{
   transform: scale(0.9);
 }
 
-header, footer {
-  min-height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: lightblue;
-  padding: 10px;
-}
-
-footer {
-  padding: auto 0; 
-}
-
-main{
-  min-height: 80vh;
-}
 
 a, a:visited, a:active {
-  color: rgb(56, 56, 56);
+  color: inherit;
 }
 
 a:hover{
-  color: darkblue;
+  color: inherit;
+  transform: scale(1.05);
+  transition: ease-in-out 0.2s;
 }
+
+ /* =================== \
+|         Classes        |
+ \ =================== */ 
+
