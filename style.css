@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+/* TURN ON FOR DEV TESTING
+div{
+  border: 2px solid red;
+}
+*/
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg-primary: ivory;
+  --color-bg-secondary: rgb(35, 35, 95);
+  --color-text-primary: rgb(56, 56, 56);
+  --color-text-secondary: ivory;
+  --color-checkbox-green: green;
+
+  font-size: 18px;
+  --font-size-h1: 30px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+}
+
+/* Will need to replace the OS styles */
+input{
+  appearance: none;
+}
+
+input[type="checkbox"]{
+  position: relative; /* This is key, otherwise the checkbox is not clickable */
+  border: 1px solid black;
+  width: 1em;
+  height: 1em;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -4px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[type="checkbox"]::before{
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+/* Must do :state::psuedo-class not
+the other way around */
+input[type="checkbox"]:checked::before{
+  visibility: visible;
+}
+
+/*
+input[type="radio"]{
+  
+}
+
+input[type="radio"]:checked::before{
+  
+}
+
+input[type="radio"]::before{
+  
+}
+*/
+
+legend{
+  color: green;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+  border: 2px solid green;
+}
+
+input:read-only{
+  background-color: lightgray;
+}
+
+input:autofill {
+  border: 1px solid purple;  
+}
+
+input:-webkit-autofill{
+  border: 10px solid purple;
+}
+
+button{
+  background-color: rgb(56, 56, 56);
+  color: ivory;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+button:active{
+  transform: scale(0.9);
+}
+
+header, footer {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+footer {
+  padding: auto 0; 
+}
+
+main{
+  min-height: 80vh;
+}
+
+a, a:visited, a:active {
+  color: rgb(56, 56, 56);
+}
+
+a:hover{
+  color: darkblue;
+}
