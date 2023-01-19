@@ -21,7 +21,12 @@ div{
   font-size: 18px;
   --font-size-h1: 30px;
   --font-size-h2: 24px;
-  --font-size-h3: 20px;
+  --font-size-h3: 21px;
+
+  font-weight: 500;
+  --font-weight-h1: 800;
+  --font-weight-h2: 700;
+  --font-weight-h3: 600;
 
   --section-height-header: 10vh;
   --section-height-footer: 10vh;
@@ -34,10 +39,29 @@ div{
 
 body {
   font-family: 'Quicksand', sans-serif;
-  font-size: 18px;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
   box-sizing: border-box;
+}
+
+h1{
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-h2);
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+h3{
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  padding: 10px;
 }
 
 header, footer {
@@ -119,6 +143,14 @@ input:read-only{
   background-color: lightgray;
 }
 
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+
 input:autofill {
   border: 1px solid purple;  
 }
@@ -158,3 +190,36 @@ a:hover{
 |         Classes        |
  \ =================== */ 
 
+.section-wrapper {
+  min-height: 30vh;
+  border: 1px dashed gray; /* Disable me for production */
+}
+
+.deck {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color-bg-secondary);
+  border-radius: 5px;
+  min-width: 250px;
+}
+
+/* Section has Deck > Cards > Gems */
+.gem {
+  
+}
+
+.card p {
+}
