@@ -33,15 +33,17 @@ const password = document.querySelector('#password');
 const confirmPass = document.querySelector('#confirm-password');
 const divs = document.querySelectorAll('.form-field');
 const inputs = document.querySelectorAll('input');
+const submitBtn = document.querySelector('#submit');
+const animText = document.querySelectorAll('.anim')
 
-console.log(inputs);
-
-function onChange() {
+function checkMatch() {
   if (confirmPass.value === password.value) {
     console.log(confirmPass.value);
     confirmPass.setCustomValidity('');
+    submitBtn.removeAttribute('disabled');
   } else {
     confirmPass.setCustomValidity('Passwords do not match');
+    submitBtn.setAttribute('disabled');
   }
 };
 
@@ -55,24 +57,19 @@ inputs.forEach((input) =>{
   });
 });
 
-/*
-email.addEventListener('input', () => {
-  if (email.checkValidity()){
-    email.classList.remove('unfulfilled');
-  }
-});
-*/
-
 password.addEventListener('input', () => {
-  onChange();
+  checkMatch();
 });
 
 confirmPass.addEventListener('input', () => {
-  onChange();
+  checkMatch();
 });
 
-
-
+animText.forEach((anim) =>{
+  anim.addEventListener('animationend', () =>{
+    anim.style.opacity = 1;
+  });
+});
 
  /* ========================== \
 |   END OF SPECIAL BEHAVIOUR    |
