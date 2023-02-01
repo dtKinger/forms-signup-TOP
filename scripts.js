@@ -3,19 +3,21 @@
  \ ========================= */
 
 // GETS + SELECTORS
+const email = document.querySelector('#email');
+const password = document.querySelector('#password');
+const confirmPass = document.querySelector('#confirm-password');
+const submitBtn = document.querySelector('#submit');
 
-const div = document.getElementById('message');
 
 /// Groups
+const animText = document.querySelectorAll('.anim')
+const divs = document.querySelectorAll('.form-field');
+const inputs = document.querySelectorAll('input');
 
 /// One-off buttons
 
 
 // INITIALIZE VARIABLES
-
-
-// FUNCTIONS
-
 
  /* ========================== \
 |  END OF GLOBAL DECLARATIONS   |
@@ -28,25 +30,16 @@ const div = document.getElementById('message');
 |       SPECIAL BEHAVIOUR       |
  \ ========================== */
 
-const email = document.querySelector('#email');
-const password = document.querySelector('#password');
-const confirmPass = document.querySelector('#confirm-password');
-const divs = document.querySelectorAll('.form-field');
-const inputs = document.querySelectorAll('input');
-const submitBtn = document.querySelector('#submit');
-const animText = document.querySelectorAll('.anim')
+password.addEventListener('input', () => {
+  checkMatch();
+});
 
-function checkMatch() {
-  if (confirmPass.value === password.value) {
-    console.log(confirmPass.value);
-    confirmPass.setCustomValidity('');
-    submitBtn.removeAttribute('disabled');
-  } else {
-    confirmPass.setCustomValidity('Passwords do not match');
-    submitBtn.setAttribute('disabled');
-  }
-};
+confirmPass.addEventListener('input', () => {
+  checkMatch();
+});
 
+
+/* Remove the Required tag once a field is valid */
 inputs.forEach((input) =>{
   input.addEventListener('input', () => {
     if (input.checkValidity()){
@@ -57,14 +50,9 @@ inputs.forEach((input) =>{
   });
 });
 
-password.addEventListener('input', () => {
-  checkMatch();
-});
 
-confirmPass.addEventListener('input', () => {
-  checkMatch();
-});
-
+/* Set opacity to 1 since animation end normally
+reverts it to its original 0 */
 animText.forEach((anim) =>{
   anim.addEventListener('animationend', () =>{
     anim.style.opacity = 1;
@@ -122,9 +110,35 @@ animText.forEach((anim) =>{
 
 /* ========================== \
 |          COMPONENTS          |
- \ =========================* /
+ \ ========================= */
 
  /* ========================== \
 |        END OF COMPONENTS      |
  \ ========================== */
 
+
+
+ /* ========================== \
+|          FUNCTIONS            |
+ \ ========================== */
+
+function checkMatch() {
+  if (confirmPass.value === password.value) {
+    console.log(confirmPass.value);
+    confirmPass.setCustomValidity('');
+    /* This works but is not a great behaviour
+    with other validations doing heavy lifting
+    // submitBtn.removeAttribute('disabled');
+    */
+  } else {
+    confirmPass.setCustomValidity('Passwords do not match');
+    /* This works but is not a great behaviour
+    with other validations doing heavy lifting
+    // submitBtn.setAttribute('disabled', true);
+    */
+  }
+};
+
+ /* ========================== \
+|        END OF FUNCTIONS       |
+ \ ========================== */
