@@ -113,6 +113,7 @@ input{
   border-radius: 3px;
   padding: 6px;
   min-width: 200px;
+  margin-top: 4px;
 }
 
 input[type="checkbox"]{
@@ -201,12 +202,19 @@ button{
   font-size: 18px;
 }
 
+.button__cta{
+max-width: 200px;
+}
+
 button:hover{
   cursor: pointer;
+  transform: translateY(-6px);
+  transition: 0.5s;
 }
 
 button:active{
   transform: scale(0.9);
+  transition: 0.2s;
 }
 
 a, a:visited, a:active {
@@ -286,13 +294,22 @@ a:hover{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 10px;
 }
 
 .form-field{
   padding: 10px;
   min-width: 200px;
   width: 25vw;
+}
+
+.section-wrapper__form-footer{
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .section-shadow{
@@ -311,7 +328,6 @@ a:hover{
   justify-content: flex-end;
   /* border: 1px dashed gray; Disable me for production */
 }
-
 
 .section-wrapper__form{
   padding: 20px;

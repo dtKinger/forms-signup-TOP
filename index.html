@@ -25,7 +25,7 @@
       <section class="section-wrapper section-wrapper__context">
           <div class="context-container">
               <p>Your efforts are escaped but not <span class="rhyme-a">recorded</span></p>
-              <p>I promise you no spam or use of <span class="rhyme-b">herein</span></p>
+              <p>We promise you no spam or use of <span class="rhyme-b">herein</span></p>
               <p>The info is input but not <span class="rhyme-a">collected</span></p>
               <p>Deposited now in a recycling <span class="rhyme-b">bin</span></p>
               <p>Though the data will be <span class="rhyme-a">unallocated</span></p>
@@ -34,21 +34,24 @@
       </section>
 
       <section class="section-wrapper section-wrapper__form section-shadow">
-        <h2>Let's do this!</h2>
-        <form class="form-container" action="" method="post">
-          <div class="form-field"><label for="input-id">FIRST NAME</label><br><input type="text" id="input-id" name="first_name"></div>
-          <div class="form-field"><label for="input-id">LAST NAME</label><br><input type="text" id="input-id" name="last_name"></div>
-          <div class="form-field"><label for="input-id">EMAIL</label><br><input type="email" id="input-id" name="email"></div>
-          <div class="form-field"><label for="input-id">PHONE NUMBER</label><br><input type="tel" id="input-id" name="phone_number"></div>
-          <div class="form-field"><label for="input-id">PASSWORD</label><br><input type="password" id="input-id" name="password"></div>
-          <div class="form-field"><label for="input-id">CONFIRM PASSWORD</label><br><input type="password" id="input-id" name="confirm_password"></div>
-        </form>
+        <h2>Tell us about yourself</h2>
+        <form id="signup" class="form-container" action="/index.html" method="post">  
+          <fieldset>
+            <div class="form-field"><label for="first-name">FIRST NAME</label><br><input type="text" id="ifirst-name" name="first_name"></div>
+            <div class="form-field"><label for="email">EMAIL</label><br><input type="email" id="email" name="email"></div>
+            <div class="form-field"><label for="password">PASSWORD</label><br><input type="password" id="password" name="password"></div>
+          </fieldset>
+          <fieldset>
+            <div class="form-field"><label for="last-name">LAST NAME</label><br><input type="text" id="last-name" name="last_name"></div>
+            <div class="form-field"><label for="phone">PHONE NUMBER</label><br><input type="tel" id="phone" name="phone_number"></div>
+            <div class="form-field"><label for="confirm_password">CONFIRM PASSWORD</label><br><input type="password" id="confirm_password" name="confirm_password"></div>
+          </fieldset>
       </section>
-
-      <section class="section-wrapper section-wrapper__cta">
-        <button class="cta">Create Account</button>
+      <section class="section-wrapper section-wrapper__form-footer">
+        <button for="signup" type="input" class="button__cta">Create Account</button>
         <p>Already have an account? <a href="/login">Log in</a>.</p>
       </section>
+        </form>
     </div>
   </main>
   <script src="scripts.js"></script>
