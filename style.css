@@ -78,7 +78,7 @@ h3{
   padding: 10px;
 }
 
-header, footer {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,7 +88,8 @@ header, footer {
 }
 
 header {
-  min-height: var(--section-height-header);
+  height: 140px;
+  display: none;
 }
 
 footer {
@@ -462,6 +463,11 @@ a:hover{
 
   .left-panel{
     display: none;
+  }
+
+  header{
+    display: block;
+    background-image: url('/Optimized-thomas-kelley-JoH60FhTp50-unsplash.jpg');
   }
 
   .right-panel{
