@@ -193,6 +193,8 @@ input:-webkit-autofill{
 
 button{
   background-color: rgb(56, 56, 56);
+  border: none;
+  border-radius: 8px;
   color: ivory;
   padding: 10px 20px;
   margin: 10px;
@@ -288,18 +290,9 @@ a:hover{
 }
 
 .form-field{
-  padding: 10px 20px;
+  padding: 10px;
   min-width: 200px;
   width: 25vw;
-}
-
-.section-wrapper__form{
-  background-color: var(--color-bg-secondary);
-  color: var(--color-text-secondary);
-}
-
-.section-wrapper__form h2{
-  margin-top: 20px;
 }
 
 .section-shadow{
@@ -317,6 +310,21 @@ a:hover{
   flex-direction: column;
   justify-content: flex-end;
   /* border: 1px dashed gray; Disable me for production */
+}
+
+
+.section-wrapper__form{
+  padding: 20px;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+}
+
+.section-wrapper__form h2{
+  margin-top: 20px;
+}
+
+.section-wrapper__cta{
+  padding: 20px;
 }
 
 .rhyme-a{
