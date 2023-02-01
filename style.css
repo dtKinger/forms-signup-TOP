@@ -395,37 +395,37 @@ a:hover{
 .text-anim-one{
   opacity: 0;
   animation: anim-one 2.5s;
-  animation-delay: 0s;
+  animation-delay: 0.5s;
 }
 
 .text-anim-two{
   opacity: 0;
   animation: anim-two 2.5s;
-  animation-delay: 2.5s;
+  animation-delay: 3s;
 }
 
 .text-anim-three{
   opacity: 0;
   animation: anim-three 2.5s;
-  animation-delay: 5s;
+  animation-delay: 5.5s;
 }
 
 .text-anim-four{
   opacity: 0;
   animation: anim-four 2.5s;
-  animation-delay: 7.5s;
+  animation-delay: 8s;
 }
 
 .text-anim-five{
   opacity: 0;
   animation: anim-five 2.5s;
-  animation-delay: 10s;
+  animation-delay: 10.5s;
 }
 
 .text-anim-six{
   opacity: 0;
   animation: anim-six 2.5s;
-  animation-delay: 12.5s;
+  animation-delay: 13s;
 }
 
 @keyframes anim-one {
