@@ -168,23 +168,15 @@ input:read-only{
 }
 
 input:invalid {
-  border-color: red;
-  content: 'Invalid';
-  color:rgb(163, 0, 0);
+  border-color: rgb(165, 0, 0);
+  box-shadow: rgb(165, 0, 0);
 }
 
 input:valid{
-  border: 2px solid green;
-  background-color: rgba(0, 255, 0, 0.75);
+  border: 2px solid rgb(0, 168, 0);
+  box-shadow: 0px 0px 1px 1px rgb(0, 165, 0);
 }
 
-
-/*
-input:valid {
-  border-color: green;
-}
-Wait until we check for validity before applying the style 
-*/
 
 /* Let browser defauls work
 input:-webkit-autofill{
@@ -196,12 +188,17 @@ input:-webkit-autofill{
   position: relative;
   color: rgb(163, 0, 0);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 
 input:required:invalid {
   border: 2px solid rgb(163, 0, 0);
+}
+
+input:optional{
+  border: none;
+  box-shadow: none;
 }
 
 
@@ -308,7 +305,7 @@ a:hover{
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
-  gap: 20px;
+  gap: 40px;
 }
 
 .form-field{  
@@ -317,7 +314,6 @@ a:hover{
   min-height: 80px;
   padding: 10px;
   max-width: 200px;
-  width: 25vw;
 }
 
 .section-wrapper__form-footer{
