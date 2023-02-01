@@ -142,6 +142,10 @@ input[type="checkbox"]:checked::before{
   visibility: visible;
 }
 
+input::placeholder{
+  color: rgb(174, 174, 174);
+}
+
 /*
 input[type="radio"]{
   
@@ -182,15 +186,18 @@ input:-webkit-autofill{
   border: 10px solid purple;
 }
 
-.required{
-  color: red;
+.unfulfilled::after{
+  content: '*Required';
+  position: relative;
+  color: rgb(163, 0, 0);
+  font-size: 12px;
 }
 
-/*
-:required {
 
+input:required:invalid {
+  border: 2px solid rgb(163, 0, 0);
 }
-*/
+
 
 button{
   background-color: rgb(56, 56, 56);
