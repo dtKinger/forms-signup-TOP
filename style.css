@@ -247,7 +247,7 @@ a:hover{
   position: relative;
   width: var(--width-left-panel);
   min-width: 350px;
-  background-image: url('thomas-kelley-JoH60FhTp50-unsplash.jpg');
+  background-image: url('Optimized-thomas-kelley-JoH60FhTp50-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -465,9 +465,17 @@ a:hover{
     display: none;
   }
 
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
   header{
     display: block;
+    width: 100%;
     background-image: url('/Optimized-thomas-kelley-JoH60FhTp50-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .right-panel{
@@ -493,6 +501,11 @@ a:hover{
 
   .section-shadow{
     box-shadow: 0px 4px 3px 3px rgb(255, 215, 0)
+  }
+
+  .section-wrapper{
+    min-height: fit-content;
+    padding-top: 40px;
   }
 
 }
