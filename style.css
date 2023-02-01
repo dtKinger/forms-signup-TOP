@@ -275,12 +275,14 @@ a:hover{
 }
 
 .bg-credit{
-  position: relative;
-  top: 85%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
   padding: 20px;
   font-size: 14px;
   color: var(--color-text-secondary);
-  text-align: center;
 }
 
 .right-panel{
@@ -471,8 +473,8 @@ a:hover{
   }
 
   .bg-credit{
-    text-align: right;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+    left: revert;
   }
 
   main{
@@ -491,6 +493,7 @@ a:hover{
   body *{
     font-size: 0.8rem;
   }
+
 
   .right-panel{
     justify-content: center;
@@ -511,10 +514,3 @@ a:hover{
   }
 
 }
-
-@media screen and (min-width: 1135px){
-  .bg-credit{
-    top: 83%;
-  }
-}
-  
