@@ -385,12 +385,14 @@ a:hover{
   min-width: 250px;
 }
 
-/* Section has Deck > Cards > Gems */
-.gem {
-  
+.pseudo-footer{
+  height: 5vh;
+  background-color: var(--color-bg-primary);
 }
 
-.card p {
+.pseudo-footer a{
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 /* ANIMATIONS */
