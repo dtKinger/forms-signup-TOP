@@ -169,7 +169,15 @@ input:read-only{
 
 input:invalid {
   border-color: red;
+  content: 'Invalid';
+  color:rgb(163, 0, 0);
 }
+
+input:valid{
+  border: 2px solid green;
+  background-color: rgba(0, 255, 0, 0.75);
+}
+
 
 /*
 input:valid {
@@ -178,13 +186,10 @@ input:valid {
 Wait until we check for validity before applying the style 
 */
 
-input:autofill {
-  border: 1px solid purple;  
-}
-
+/* Let browser defauls work
 input:-webkit-autofill{
-  border: 10px solid purple;
 }
+*/
 
 .unfulfilled::after{
   content: '*Required';
@@ -303,12 +308,15 @@ a:hover{
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
+  gap: 20px;
 }
 
 .form-field{  
+  display: flex;
+  flex-direction: column;
   min-height: 80px;
   padding: 10px;
-  min-width: 200px;
+  max-width: 200px;
   width: 25vw;
 }
 
