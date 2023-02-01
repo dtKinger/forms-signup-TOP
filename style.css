@@ -87,11 +87,6 @@ footer {
   padding: 10px;
 }
 
-header {
-  height: 140px;
-  display: none;
-}
-
 footer {
   min-height: var(--section-height-footer);  
   padding: auto 0; 
@@ -462,20 +457,20 @@ a:hover{
 @media screen and (max-width: 760px){
 
   .left-panel{
-    display: none;
+    min-height: 200px;
+    position: relative;
+    min-width: 100%;
+    justify-content: space-between;
+  }
+
+  .bg-credit{
+    text-align: right;
+    font-size: 0.5rem;
   }
 
   main{
     display: flex;
     flex-direction: column;
-  }
-
-  header{
-    display: block;
-    width: 100%;
-    background-image: url('/Optimized-thomas-kelley-JoH60FhTp50-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .right-panel{
