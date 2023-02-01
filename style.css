@@ -392,3 +392,67 @@ a:hover{
 
 .card p {
 }
+
+/* ANIMATIONS */
+
+.text-anim-one{
+  opacity: 0;
+  animation: anim-one 2s;
+  animation-delay: 0s;
+}
+
+.text-anim-two{
+  opacity: 0;
+  animation: anim-two 2s;
+  animation-delay: 2s;
+}
+
+.text-anim-three{
+  opacity: 0;
+  animation: anim-three 2s;
+  animation-delay: 4s;
+}
+
+.text-anim-four{
+  opacity: 0;
+  animation: anim-four 2s;
+  animation-delay: 6s;
+}
+
+.text-anim-five{
+  opacity: 0;
+  animation: anim-five 2s;
+  animation-delay: 8s;
+}
+
+.text-anim-six{
+  opacity: 0;
+  animation: anim-six 2s;
+  animation-delay: 10s;
+}
+
+@keyframes anim-one {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes anim-two {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes anim-three {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes anim-four {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes anim-five {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes anim-six {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
