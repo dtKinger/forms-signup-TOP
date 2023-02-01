@@ -190,7 +190,8 @@ input:-webkit-autofill{
   content: '*Required';
   position: relative;
   color: rgb(163, 0, 0);
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 
@@ -304,7 +305,8 @@ a:hover{
   padding: 10px;
 }
 
-.form-field{
+.form-field{  
+  min-height: 80px;
   padding: 10px;
   min-width: 200px;
   width: 25vw;
