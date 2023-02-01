@@ -397,38 +397,38 @@ a:hover{
 
 .text-anim-one{
   opacity: 0;
-  animation: anim-one 2s;
+  animation: anim-one 2.5s;
   animation-delay: 0s;
 }
 
 .text-anim-two{
   opacity: 0;
-  animation: anim-two 2s;
-  animation-delay: 2s;
+  animation: anim-two 2.5s;
+  animation-delay: 2.5s;
 }
 
 .text-anim-three{
   opacity: 0;
-  animation: anim-three 2s;
-  animation-delay: 4s;
+  animation: anim-three 2.5s;
+  animation-delay: 5s;
 }
 
 .text-anim-four{
   opacity: 0;
-  animation: anim-four 2s;
-  animation-delay: 6s;
+  animation: anim-four 2.5s;
+  animation-delay: 7.5s;
 }
 
 .text-anim-five{
   opacity: 0;
-  animation: anim-five 2s;
-  animation-delay: 8s;
+  animation: anim-five 2.5s;
+  animation-delay: 10s;
 }
 
 .text-anim-six{
   opacity: 0;
-  animation: anim-six 2s;
-  animation-delay: 10s;
+  animation: anim-six 2.5s;
+  animation-delay: 12.5s;
 }
 
 @keyframes anim-one {
@@ -456,3 +456,4 @@ a:hover{
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
