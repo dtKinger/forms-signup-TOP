@@ -102,9 +102,16 @@ main {
   min-height: var(--section-height-main);
 }
 
+label{
+  font-size: 0.75rem;
+}
+
 /* Will need to replace the OS styles */
 input{
   appearance: none;
+  border: 1px solid rgba(56, 56, 56, 0.7);
+  border-radius: 3px;
+  padding: 6px;
 }
 
 input[type="checkbox"]{
@@ -163,9 +170,12 @@ input:invalid {
   border-color: red;
 }
 
+/*
 input:valid {
   border-color: green;
 }
+Wait until we check for validity before applying the style 
+*/
 
 input:autofill {
   border: 1px solid purple;  
@@ -200,7 +210,6 @@ button:hover{
 button:active{
   transform: scale(0.9);
 }
-
 
 a, a:visited, a:active {
   color: inherit;
@@ -262,22 +271,37 @@ a:hover{
   text-align: center;
 }
 
-
 .right-panel{
   width: calc(100vw - var(--width-left-panel));
   display: flex;
   flex-direction: column;
 }
 
-
-.context-conainer{
+.context-container{
   display: flex;
   flex-direction: column;
-}
-
-.context-for-signup{
   font-weight: bold;
   font-size: 1rem;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form-field{
+  padding: 10px 20px;
+  min-width: 200px;
+  width: 25vw;
+}
+
+.section-wrapper__form{
+  background-color: white;
+}
+
+.section-shadow{
+  box-shadow: 3px 3px 2px 2px rgba(56, 56, 56, 0.7);
 }
 
 .section-wrapper {
