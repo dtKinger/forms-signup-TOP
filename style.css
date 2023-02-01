@@ -112,6 +112,7 @@ input{
   border: 1px solid rgba(56, 56, 56, 0.7);
   border-radius: 3px;
   padding: 6px;
+  min-width: 200px;
 }
 
 input[type="checkbox"]{
@@ -155,11 +156,6 @@ input[type="radio"]::before{
 */
 
 legend{
-  color: green;
-  font-weight: bold;
-  font-size: 1.25rem;
-  text-align: center;
-  border: 2px solid green;
 }
 
 input:read-only{
@@ -226,7 +222,7 @@ a:hover{
  \ =================== */ 
 
 .left-panel{
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   width: var(--width-left-panel);
   min-width: 350px;
@@ -288,6 +284,7 @@ a:hover{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .form-field{
@@ -297,16 +294,21 @@ a:hover{
 }
 
 .section-wrapper__form{
-  background-color: white;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+}
+
+.section-wrapper__form h2{
+  margin-top: 20px;
 }
 
 .section-shadow{
-  box-shadow: 3px 3px 2px 2px rgba(56, 56, 56, 0.7);
+  box-shadow: 5px 4px 2px 2px rgba(255, 215, 0, 0.9);
 }
 
 .section-wrapper {
   min-height: 30vh;
-  border: 1px dashed gray; /* Disable me for production */
+   /* border: 1px dashed gray;Disable me for production */
 }
 
 .section-wrapper__context{
@@ -314,7 +316,7 @@ a:hover{
   padding: 20px 20px 40px 20px;
   flex-direction: column;
   justify-content: flex-end;
-  border: 1px dashed gray; /* Disable me for production */
+  /* border: 1px dashed gray; Disable me for production */
 }
 
 .rhyme-a{
