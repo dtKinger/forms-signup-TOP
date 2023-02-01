@@ -511,3 +511,10 @@ a:hover{
   }
 
 }
+
+@media screen and (min-width: 1135px){
+  .bg-credit{
+    top: 83%;
+  }
+}
+  
