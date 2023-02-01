@@ -17,6 +17,10 @@ div{
   --color-text-primary: rgb(56, 56, 56);
   --color-text-secondary: ivory;
   --color-checkbox-green: green;
+  --color-state-indeterminate: yellow;
+  --color-state-success: limegreen;
+  --color-state-error: rgb(225, 0, 0);
+  --color-state-caution: orange;
 
   font-size: 18px;
   --font-size-h1: 30px;
@@ -28,8 +32,8 @@ div{
   --font-weight-h2: 700;
   --font-weight-h3: 600;
 
-  --section-height-header: 10vh;
-  --section-height-footer: 10vh;
+  --section-height-header: 5vh;
+  --section-height-footer: 15vh;
   --section-height-main: calc(100vh - (var(--section-height-header) + var(--section-height-footer)));
 }
 
@@ -158,6 +162,16 @@ input:autofill {
 input:-webkit-autofill{
   border: 10px solid purple;
 }
+
+.required{
+  color: red;
+}
+
+/*
+:required {
+
+}
+*/
 
 button{
   background-color: rgb(56, 56, 56);
