@@ -481,8 +481,12 @@ a:hover{
     align-items: center;
   }
 
+  .form-container{
+    justify-content: center;
+  }
+
   .section-shadow{
-    box-shadow: none;
+    box-shadow: 0px 4px 3px 3px rgb(255, 215, 0)
   }
 
 }
