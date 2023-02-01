@@ -28,23 +28,46 @@ const div = document.getElementById('message');
 |       SPECIAL BEHAVIOUR       |
  \ ========================== */
 
+const email = document.querySelector('#email');
 const password = document.querySelector('#password');
-const confirm2 = document.querySelector('#confirm-password');
+const confirmPass = document.querySelector('#confirm-password');
+const divs = document.querySelectorAll('.form-field');
+const inputs = document.querySelectorAll('input');
+
+console.log(inputs);
 
 function onChange() {
-  if (confirm2.value === password.value) {
-    console.log(confirm2.value);
-    confirm2.setCustomValidity('');
+  if (confirmPass.value === password.value) {
+    console.log(confirmPass.value);
+    confirmPass.setCustomValidity('');
   } else {
-    confirm2.setCustomValidity('Passwords do not match');
+    confirmPass.setCustomValidity('Passwords do not match');
   }
 };
 
-password.addEventListener('input', function(){
+inputs.forEach((input) =>{
+  input.addEventListener('input', () => {
+    if (input.checkValidity()){
+      input.parentElement.classList.remove('unfulfilled');
+    } else if (input['required']){
+      input.parentElement.classList.add('unfulfilled');
+    }
+  });
+});
+
+/*
+email.addEventListener('input', () => {
+  if (email.checkValidity()){
+    email.classList.remove('unfulfilled');
+  }
+});
+*/
+
+password.addEventListener('input', () => {
   onChange();
 });
 
-confirm2.addEventListener('input', () => {
+confirmPass.addEventListener('input', () => {
   onChange();
 });
 
