@@ -484,7 +484,7 @@ a:hover{
 
 }
 
-@media screen and (max-width: 540px){
+@media screen and (max-width: 539px){
 
   body *{
     font-size: 0.8rem;
