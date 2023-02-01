@@ -26,6 +26,8 @@ div{
   --color-state-success: limegreen;
   --color-state-error: rgb(225, 0, 0);
   --color-state-caution: orange;
+  --color-accent-a: darkcyan;
+  --color-accent-b: rgb(187, 161, 11);
 
   font-size: 18px;
   --font-size-h1: 30px;
@@ -227,14 +229,28 @@ a:hover{
 }
 
 .logo-bg{
+  display: flex;
   position: relative;
   top: 22.5%;
-  display: flex;
   width: 100%;
   height: 100px;
   background-color: rgba(56, 56, 56, 0.7);
-  align-items: center;
+}
+
+.logo-text{
+  display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-family: 'Norse', sans-serif;
+  color: var(--color-text-secondary);
+}
+
+.logo-text:hover{
+  color: gold;
+  transition: 1s;
 }
 
 .bg-credit{
@@ -246,28 +262,43 @@ a:hover{
   text-align: center;
 }
 
-.logo{
-  width: 100%;
-  text-align: center;
-  text-wrap: nowrap;
-}
-
-.logo-text{
-  position: relative;
-  top: 6px;
-  font-size: 3rem;
-  font-family: 'Norse', sans-serif;
-  color: var(--color-text-secondary);
-}
 
 .right-panel{
-  width: calc(100vw - var(--width-left-panel))
+  width: calc(100vw - var(--width-left-panel));
+  display: flex;
+  flex-direction: column;
 }
 
+
+.context-conainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.context-for-signup{
+  font-weight: bold;
+  font-size: 1rem;
+}
 
 .section-wrapper {
   min-height: 30vh;
   border: 1px dashed gray; /* Disable me for production */
+}
+
+.section-wrapper__context{
+  display: flex;
+  padding: 20px 20px 40px 20px;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px dashed gray; /* Disable me for production */
+}
+
+.rhyme-a{
+  color: var(--color-accent-a);
+}
+
+.rhyme-b{
+  color: var(--color-accent-b);
 }
 
 .deck {
