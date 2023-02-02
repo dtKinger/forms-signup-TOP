@@ -28,6 +28,7 @@ div{
   --color-state-caution: orange;
   --color-accent-a: darkcyan;
   --color-accent-b: rgb(187, 161, 11);
+  --color-accent-b-faded: rgba(187, 161, 11, 0.75);
 
   font-size: 18px;
   --font-size-h1: 30px;
@@ -99,7 +100,7 @@ main {
 }
 
 label{
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 /* Will need to replace the OS styles */
@@ -183,7 +184,7 @@ input:-webkit-autofill{
   content: '*Required';
   position: relative;
   color: rgb(163, 0, 0);
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -325,7 +326,7 @@ a:hover{
 }
 
 .section-shadow{
-  box-shadow: 5px 4px 3px 3px rgb(255, 215, 0);
+  box-shadow: 5px 4px 3px 3px var(--color-accent-b-faded);
   z-index: 1;
 }
 
