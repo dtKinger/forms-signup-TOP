@@ -54,7 +54,6 @@ animText.forEach((anim) =>{
 
 function checkMatch() {
   if (confirmPass.value === password.value) {
-    console.log(confirmPass.value);
     confirmPass.setCustomValidity('');
     /* This works but is not a great behaviour
     with other validations doing heavy lifting
